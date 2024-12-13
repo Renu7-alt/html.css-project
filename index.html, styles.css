@@ -1,0 +1,112 @@
+/* Define custom properties (CSS variables) */
+:root {
+    --base-font-color: #839496;
+    --secondary-font-color: #586E75;
+    --emphasised-font: #93A1A1;
+
+    --c-background-color: #002B36;
+    --c-background-highlights: #073642;
+
+    --c-yellow: #B58900;
+    --c-orange: #CB4B16;
+    --c-red: #DC322F;
+    --c-magenta: #D33682;
+    --c-violet: #6C71C4;
+    --c-blue: #268BD2;
+    --c-cyan: #2AA198;
+    --c-green: #859900;
+}
+
+/* General body styles */
+body {
+    background-color: var(--c-background-color);
+    color: var(--base-font-color);
+    font-family: Tahoma, sans-serif;
+    max-width: 800px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* Header and footer styles */
+.header, .footer {
+    background-color: var(--c-background-highlights);
+    color: var(--base-font-color);
+    text-align: center;
+    font-size: 1.5em;
+    padding: 20px;
+}
+
+/* Main content styles */
+.main {
+    color: var(--base-font-color);
+}
+
+/* Article and section styles */
+article section {
+    border: 3px solid var(--c-cyan);
+    padding: 10px;
+    margin: 20px 0;
+}
+
+article h2, article h3 {
+    color: var(--c-yellow);
+    padding-top: 20px;
+}
+
+/* Navigation menu styles */
+.nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.nav li a {
+    color: var(--c-magenta);
+    text-decoration: none;
+}
+
+.nav li a:hover {
+    color: var(--c-orange);
+}
+
+/* Aside styles */
+.aside {
+    color: var(--c-green);
+    margin-top: 20px;
+}
+
+.aside a {
+    color: var(--c-red);
+    text-decoration: none;
+}
+
+.aside a:hover {
+    color: var(--c-blue);
+}
+
+/* Heading styles */
+h1 {
+    color: var(--c-yellow);
+    text-align: center;
+}
+
+/* Media queries */
+@media screen {
+    body {
+        background-color: var(--c-background-color);
+        color: var(--base-font-color);
+    }
+}
+
+@media print {
+    body {
+        background-color: white;
+        color: black;
+    }
+    div#navigation {
+        display: none;
+    }
+}
